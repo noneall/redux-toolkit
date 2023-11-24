@@ -17,8 +17,8 @@
     "rtk-query-codegen-openapi": "lib/bin/cli.js"
   },
   "scripts": {
-    "build": "tsc && chmod +x lib/bin/cli.js",
-    "prepare": "npm run build && chmod +x ./lib/bin/cli.js",
+    "build": "tsc",
+    "prepare": "npm run build",
     "format": "prettier --write \"src/**/*.ts\"",
     "test:update": "jest --runInBand --updateSnapshot",
     "test:update:enum": "lib/bin/cli.js test/config.example.enum.ts",
@@ -58,7 +58,7 @@
   "dependencies": {
     "@apidevtools/swagger-parser": "^10.0.2",
     "commander": "^6.2.0",
-    "oazapfts": "^4.8.0",
+    "oazapfts": "file:./../../../oazapfts",
     "prettier": "^2.2.1",
     "semver": "^7.3.5",
     "swagger2openapi": "^7.0.4",
